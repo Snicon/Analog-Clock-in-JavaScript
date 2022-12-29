@@ -9,7 +9,7 @@ const setClock = () => {
     const secondsRatio = date.getSeconds() / 60
     // Minutes & hours should move smoothly and not suddenly change position. -> Hence the "weird" math
     const minutesRatio = (secondsRatio + date.getMinutes()) / 60
-    const hoursRatio = (secondsRatio + minutesRatio + date.getHours()) / 12
+    const hoursRatio = (minutesRatio + date.getHours()) / 12
 
     // Rotate the hands to the right positions
     setRotation(secondHand, secondsRatio)
