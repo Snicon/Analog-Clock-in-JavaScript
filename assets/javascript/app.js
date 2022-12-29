@@ -1,5 +1,3 @@
-
-
 // Hand vars
 const secondHand = document.querySelector('.second')
 const minuteHand = document.querySelector('.minute')
