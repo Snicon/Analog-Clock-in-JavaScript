@@ -1,3 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
 body {
-    background-color: blueviolet;
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#app {
+    width: 450px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 4px 4px 10px black;
+    border-radius: 50%;
+    border: 12px solid white;
+    position: relative;
+}
+
+#app .number {
+    --rotation: 0;
+    position: absolute;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+#app .number div {
+    --rotation: 0;
+    transform: rotate(var(--rotation));
+}
+
+#app .number1 {
+    --rotation: 30deg;
+}
+#app .number1 div {
+    --rotation: -30deg;
+}
+#app .number2 {
+    --rotation: 60deg;
+}
+#app .number2 div {
+    --rotation: -60deg;
+}
+#app .number3 {
+    --rotation: 90deg;
+}
+#app .number3 div {
+    --rotation: -90deg;
+}
+#app .number4 {
+    --rotation: 120deg;
+}
+#app .number4 div {
+    --rotation: -120deg;
+}
+#app .number5 {
+    --rotation: 150deg;
+}
+#app .number5 div {
+    --rotation: -150deg;
+}
+#app .number6 {
+    --rotation: 180deg;
+}
+#app .number6 div {
+    --rotation: -180deg;
+}
+#app .number7 {
+    --rotation: 210deg;
+}
+#app .number7 div {
+    --rotation: -210deg;
+}
+#app .number8 {
+    --rotation: 240deg;
+}
+#app .number8 div {
+    --rotation: -240deg;
+}
+#app .number9 {
+    --rotation: 270deg;
+}
+#app .number9 div {
+    --rotation: -270deg;
+}
+#app .number10 {
+    --rotation: 300deg;
+}
+#app .number10 div {
+    --rotation: -300deg;
+}
+#app .number11 {
+    --rotation: 330deg;
+}
+#app .number11 div {
+    --rotation: -330deg;
+}
+
+#app::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+#app .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    border-radius: 40px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+#app .hand.second {
+    width: 6px;
+    height: 45%;
+    background-color: #f43f5e;
+}
+#app .hand.minute {
+    width: 8px;
+    height: 40%;
+    background-color: black;
+}
+#app .hand.hour {
+    width: 12px;
+    height: 35%;
+    background-color: black;
 }
