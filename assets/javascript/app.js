@@ -1,0 +1,1 @@
+document.querySelector("div#app").innerHTML = '<p>App successfully loaded.</p>';
